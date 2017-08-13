@@ -1,5 +1,4 @@
 __author__ = 'Artgor'
-from sklearn.externals import joblib
 
 from codecs import open
 from scipy import misc
