@@ -12,7 +12,7 @@ CORS(app, headers=['Content-Type'])
 @app.route("/", methods=["POST", "GET", 'OPTIONS'])
 def index_page():
 
-	return render_template()
+	return render_template('index.html')
 
 @app.route('/hook', methods = ["GET", "POST", 'OPTIONS'])
 def get_image():
