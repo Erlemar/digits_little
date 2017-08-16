@@ -1,10 +1,9 @@
 __author__ = 'Artgor'
-
 from codecs import open
-from PIL import Image
+#from PIL import Image
 import os
 import uuid
-import boto
+#import boto
 import boto3
 from boto.s3.key import Key
 from boto.s3.connection import S3Connection

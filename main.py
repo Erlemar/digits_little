@@ -1,9 +1,7 @@
 __author__ = 'Artgor'
 from functions import Model
-from codecs import open
 from flask import Flask, render_template, request
 from flask_cors import CORS, cross_origin
-from PIL import Image
 import base64
 import os
 

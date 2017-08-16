@@ -1,14 +1,10 @@
 //for canvas drawing used code from here: https://github.com/zealerww/digits_recognition/blob/master/digits_recognition/static/draw.js
 var drawing = false;
-
 var context;
-
 var offset_left = 0;
 var offset_top = 0;
 
-
-function start_canvas ()
-{
+function start_canvas () {
     var canvas = document.getElementById ("the_stage");
     context = canvas.getContext ("2d");
     canvas.onmousedown = function (event) {mousedown(event)};
@@ -21,8 +17,7 @@ function start_canvas ()
     draw();
 }
 
-function getPosition(evt)
-{
+function getPosition(evt) {
     evt = (evt) ?  evt : ((event) ? event : null);
     var left = 0;
     var top = 0;
@@ -45,8 +40,7 @@ function getPosition(evt)
 }
 
 function
-mousedown(event)
-{
+mousedown(event) {
     drawing = true;
     var location = getPosition(event);
     context.lineWidth = 8.0;
@@ -56,8 +50,7 @@ mousedown(event)
 }
 
 function
-mousemove(event)
-{
+mousemove(event) {
     if (!drawing) 
         return;
     var location = getPosition(event);
@@ -68,8 +61,7 @@ mousemove(event)
 
 
 function
-mouseup(event)
-{
+mouseup(event) {
     if (!drawing) 
         return;
     mousemove(event);
@@ -77,16 +69,12 @@ mouseup(event)
     drawing = false;
 }
 
-function draw()
-{
-
+function draw() {
     context.fillStyle = '#ffffff';
     context.fillRect(0, 0, 200, 200);
-
 }
 
-function clearCanvas()
-{
+function clearCanvas() {
     context.clearRect (0, 0, 200, 200);
     draw();
     document.getElementById("rec_result").innerHTML = "";
